@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 const handlerElephants = require('../src/handlerElephants');
 
 describe('Testes da função HandlerElephants', () => {
@@ -22,5 +21,8 @@ describe('Testes da função HandlerElephants', () => {
   });
   it('Verifica dias de vistas dos Elefantes', () => {
     expect(handlerElephants('availability')).toEqual(['Friday', 'Saturday', 'Sunday', 'Tuesday']);
+  });
+  it('Verifica se o nome da espécie é elephants', () => {
+    expect(handlerElephants('name')).toBe('elephants');
   });
 });
